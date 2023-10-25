@@ -27,7 +27,7 @@ jobs:
       - name: Setup MariaDB
         uses: getong/mariadb-action@v1.1
         with:
-          mysql root password: ${{ secrets.MARIADBPASSWORD }} # Required if "mysql user" is empty, default is empty. The root superuser password
+          mysql root password: ${{ secrets.MARIADB_PASSWORD }} # Required if "mysql user" is empty, default is empty. The root superuser password
      
       - name: Start Redis
         uses: supercharge/redis-github-action@1.1.0
