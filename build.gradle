@@ -16,7 +16,7 @@ configurations {
 
 task copySecret(type: Copy) {
 	from './submodule_test/application.yml' // 서브모듈에 있는 application.yml 설정파일을 복사한다.
-	into 'src/main/resources'
+	into './src/main/resources'
 }
 
 repositories {
