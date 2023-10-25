@@ -17,7 +17,7 @@ configurations {
 task copyPrivate(type: Copy) {
 	copy {
 		from './submodule_test'
-		include "*.yml"
+		include "*.yaml"
 		into 'src/main/resources'
 	}
 }
