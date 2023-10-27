@@ -5,7 +5,7 @@ files:
   - source: /
     destination: /home/ubuntu/petgoorm_test1
     overwrite: yes
-file_exists_behavior: OVERWRITE
+
 permissions:
   - object: /
     pattern: "**"
