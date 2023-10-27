@@ -38,6 +38,7 @@ public class MemberController {
 
     @PostMapping("/login")
     public ResponseDTO<MemberResponseDTO.TokenInfo> login(@RequestBody MemberRequestDTO.Login login) {
+        log.info("로그인 ");
         return memberService.login(login);
     }
 
