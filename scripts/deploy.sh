@@ -18,11 +18,11 @@ else
   sleep 5
 fi
 
-echo "> Deploy - $JAR_PATH "
-nohup java -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
-
 echo "> Start Redis Container"
 docker-compose -f $REPOSITORY/docker-compose-redis.yml up -d redis
 
 echo "> Remove dangling images"
 docker rmi -f $(docker images -f "dangling=true" -q) || true
+
+echo "> Deploy - $JAR_PATH "
+nohup java -jar $JAR_PATH > /dev/null 2> /dev/null < /dev/null &
