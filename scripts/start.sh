@@ -15,7 +15,7 @@ cp $PROJECT_ROOT/build/libs/*.jar $JAR_FILE
 
 # redis container 실행
 echo "> Start Redis Container"
-docker-compose -f $PROJECT_ROOT/docker-compose.yml up --build -d
+docker-compose -f $PROJECT_ROOT/docker-compose.yml up -d
 
 echo "> Remove dangling images"
 docker rmi -f $(docker images -f "dangling=true" -q) || true
